@@ -11,7 +11,9 @@ const User = () => {
         const  user =await JSON.parse(localStorage.getItem('user'));
         const userId = user._id;
         try {
-            const responce =await axios.get(`https://moviezone-q639.onrender.com/api/v1/user/${userId}`);
+            const responce = await axios.get(
+              `https://moviezone-sf85.onrender.com/api/v1/user/${userId}`
+            );
             setTickets(responce.data.tickets);
         } catch (error) {
             console.log("Error fetching", error);

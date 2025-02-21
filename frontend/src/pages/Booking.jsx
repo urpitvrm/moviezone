@@ -16,7 +16,7 @@ const Booking = () => {
         navigate("/signin");
         return;
       }
-      await axios.post("https://moviezone-q639.onrender.com/api/v1/book", {
+      await axios.post("https://moviezone-sf85.onrender.com/api/v1/book", {
         movieId: movieId,
         ticketId: selectedSeat,
         userId:user._id
@@ -32,7 +32,7 @@ const Booking = () => {
     const fetchMovieData = async () => {
       try {
         const response = await axios.get(
-          `https://moviezone-q639.onrender.com/api/v1/movie/${movieId}`
+          `https://moviezone-sf85.onrender.com/api/v1/movie/${movieId}`
         );
         console.log("Fetched movie data:", response.data);
         setbookedseat(response.data.ticketIds || []);

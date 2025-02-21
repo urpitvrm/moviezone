@@ -9,11 +9,14 @@ const SignUp = () => {
   const hangdlesubmit=async(e)=>{
     e.preventDefault();
     try {
-      const response = await axios.post(`https://moviezone-q639.onrender.com/api/v1/register`, {
-        name: name,
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `https://moviezone-sf85.onrender.com/api/v1/register`,
+        {
+          name: name,
+          email: email,
+          password: password,
+        }
+      );
       alert("signup successfully");
       console.log(response.data);
       localStorage.setItem("user", JSON.stringify(response.data.user))
