@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "../components/card";
+import Card from "../components/Card";
 import { Link } from "react-router-dom";
 import Skeleton from "../components/layouts/Skeleton"
 
@@ -10,7 +10,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://moviezone-q639.onrender.com/api/v1/movies`);
+        const response = await axios.get(
+          `https://moviezone-sf85.onrender.com/api/v1/movies`
+        );
         setItems(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
